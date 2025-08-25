@@ -1,4 +1,3 @@
-// src/services/papersService.ts
 import { 
   collection, 
   getDocs, 
@@ -15,7 +14,6 @@ export interface Paper {
   slug: string
   excerpt: string
   date: string
-  author: string
   category: string
   content: string
 }
@@ -35,7 +33,6 @@ export const getAllPapers = async (): Promise<Paper[]> => {
         slug: data.slug || '',
         excerpt: data.excerpt || '',
         date: data.date || '',
-        author: data.author || '',
         category: data.category || '',
         content: data.content || ''
       } as Paper)
@@ -74,7 +71,6 @@ export const getPaperBySlug = async (slug: string): Promise<Paper | null> => {
       slug: paperData.slug || '',
       excerpt: paperData.excerpt || '',
       date: paperData.date || '',
-      author: paperData.author || '',
       category: paperData.category || '',
       content: paperData.content || ''
     } as Paper

@@ -7,91 +7,74 @@ export default function About() {
           href="/"
           className="mb-10 text-blue-600 hover:text-blue-800 font-medium transition delay-50 duration-300 ease-in-out hover:-translate-x-3"
         >
-          &larr; Ritorna ai paper
+          &larr; Ritorna agli articoli
         </Link>
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-blue-600">Su di Me</h2>
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Su di Noi</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Chi sono?
+              Cosa è "Salute con AI"?
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              *Inserire descrizione*
+            Ci impegniamo a fornire supporto per un utilizzo consapevole di AI per la propria salute.
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Maggiori informazioni sul profilo Linkedin:
-            </p>
-            <a href="https://www.linkedin.com/in/barbara-camerin-83b3701b/?originalSubdomain=it" className="text-md" target="_blank" ><button role="link" className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px]  after:w-full after:origin-bottom-left after:scale-x-100 after:bg-neutral-800 after:transition-transform after:duration-150 after:ease-in-out hover:after:origin-bottom-right hover:after:scale-x-0">Barbara Camerin</button> </a>
+            
             
             </div>
+
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <div className="flex flex-col items-center justify-center">
               <img
-                src="/images/ProPicBC.jpeg"
+                src="/images/LogoSalcai.jpg"
                 alt="Profile"
                 className="h-32 w-32 rounded-full object-cover mb-8"
               />
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900">Barbara Camerin</h3>
-              <p className="mt-2 text-lg leading-8 text-gray-600">*Inserire Professione*</p>
+              <h3 className="text-2xl font-bold tracking-tight text-gray-900">Salute con AI</h3>
             </div>
-            
-            <dl className="mt-16 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                    </svg>
-                  </div>
-                  Research Focus
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
-                  My research focuses on the intersection of artificial intelligence, quantum computing, and sustainable technology solutions for the future.
-                </dd>
-              </div>
-              <div className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
-                    </svg>
-                  </div>
-                  Education
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Ph.D. in Computer Science, Stanford University (2015)<br />
-                  M.S. in Artificial Intelligence, MIT (2011)<br />
-                  B.S. in Computer Engineering, UC Berkeley (2009)
-                </dd>
-              </div>
-              <div className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.5 1.5 0 011.061-.44H18a6 6 0 010 12h-3a1.5 1.5 0 01-1.06-.44l-1.06-1.061a1.5 1.5 0 00-1.061-.44H9a1.5 1.5 0 00-1.06.44L6.939 9.439a1.5 1.5 0 01-1.06.44H3a6 6 0 010-12h3a1.5 1.5 0 011.06.44l1.061 1.06a1.5 1.5 0 001.06.44h4.782a1.5 1.5 0 001.06-.44zM12 15a3 3 0 100-6 3 3 0 000 6z" />
-                    </svg>
-                  </div>
-                  Publications
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Over 50 peer-reviewed publications in top-tier conferences and journals, with more than 2000 citations.
-                </dd>
-              </div>
-              <div className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-                    </svg>
-                  </div>
-                  Awards
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
-                  NSF Career Award (2020)<br />
-                  Best Paper Award, AAAI Conference (2019)<br />
-                  Google Research Scholar (2018)
-                </dd>
-              </div>
-            </dl>
+            {/*I nostri link social */}
+            <p className="mt-6 text-center text-lg leading-8 text-gray-600">
+              I nostri social:
+            </p>
+
+
+            <div >
+              <ul className="md:flex justify-center space-x-6 md:order-2">
+                <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="#" aria-label="FACEBOOK" target="_blank" rel="noopener"
+                          className="w-min flex items-center px-1 py-1 rounded-md text-black "><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 71 72"
+                          fill="none">
+                          <path
+                            d="M46.4233 38.6403L47.7279 30.3588H39.6917V24.9759C39.6917 22.7114 40.8137 20.4987 44.4013 20.4987H48.1063V13.4465C45.9486 13.1028 43.7685 12.9168 41.5834 12.8901C34.9692 12.8901 30.651 16.8626 30.651 24.0442V30.3588H23.3193V38.6403H30.651V58.671H39.6917V38.6403H46.4233Z"
+                            fill="#111827" />
+                          </svg>
+                          <span className="ml-2">Facebook</span>
+                      </a>
+                  </li>
+                  <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="https://www.instagram.com/saluteconai_it/" aria-label="INSTAGRAM" target="_blank" rel="noopener"
+                          className="w-min flex items-center px-1 py-1 rounded-md text-black ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 71 72"
+                          fill="none">
+                          <path
+                            d="M27.3762 35.7808C27.3762 31.1786 31.1083 27.4468 35.7132 27.4468C40.3182 27.4468 44.0522 31.1786 44.0522 35.7808C44.0522 40.383 40.3182 44.1148 35.7132 44.1148C31.1083 44.1148 27.3762 40.383 27.3762 35.7808ZM22.8683 35.7808C22.8683 42.8708 28.619 48.618 35.7132 48.618C42.8075 48.618 48.5581 42.8708 48.5581 35.7808C48.5581 28.6908 42.8075 22.9436 35.7132 22.9436C28.619 22.9436 22.8683 28.6908 22.8683 35.7808ZM46.0648 22.4346C46.0646 23.0279 46.2404 23.608 46.5701 24.1015C46.8997 24.595 47.3684 24.9797 47.9168 25.2069C48.4652 25.4342 49.0688 25.4939 49.6511 25.3784C50.2334 25.2628 50.7684 24.9773 51.1884 24.5579C51.6084 24.1385 51.8945 23.6041 52.0105 23.0222C52.1266 22.4403 52.0674 21.8371 51.8404 21.2888C51.6134 20.7406 51.2289 20.2719 50.7354 19.942C50.2418 19.6122 49.6615 19.436 49.0679 19.4358H49.0667C48.2708 19.4361 47.5077 19.7522 46.9449 20.3144C46.3821 20.8767 46.0655 21.6392 46.0648 22.4346ZM25.6072 56.1302C23.1683 56.0192 21.8427 55.6132 20.9618 55.2702C19.7939 54.8158 18.9606 54.2746 18.0845 53.4002C17.2083 52.5258 16.666 51.6938 16.2133 50.5266C15.8699 49.6466 15.4637 48.3214 15.3528 45.884C15.2316 43.2488 15.2073 42.4572 15.2073 35.781C15.2073 29.1048 15.2336 28.3154 15.3528 25.678C15.4639 23.2406 15.8731 21.918 16.2133 21.0354C16.668 19.8682 17.2095 19.0354 18.0845 18.1598C18.9594 17.2842 19.7919 16.7422 20.9618 16.2898C21.8423 15.9466 23.1683 15.5406 25.6072 15.4298C28.244 15.3086 29.036 15.2844 35.7132 15.2844C42.3904 15.2844 43.1833 15.3106 45.8223 15.4298C48.2612 15.5408 49.5846 15.9498 50.4677 16.2898C51.6356 16.7422 52.4689 17.2854 53.345 18.1598C54.2211 19.0342 54.7615 19.8682 55.2161 21.0354C55.5595 21.9154 55.9658 23.2406 56.0767 25.678C56.1979 28.3154 56.2221 29.1048 56.2221 35.781C56.2221 42.4572 56.1979 43.2466 56.0767 45.884C55.9656 48.3214 55.5573 49.6462 55.2161 50.5266C54.7615 51.6938 54.2199 52.5266 53.345 53.4002C52.4701 54.2738 51.6356 54.8158 50.4677 55.2702C49.5872 55.6134 48.2612 56.0194 45.8223 56.1302C43.1855 56.2514 42.3934 56.2756 35.7132 56.2756C29.033 56.2756 28.2432 56.2514 25.6072 56.1302ZM25.4001 10.9322C22.7371 11.0534 20.9174 11.4754 19.3282 12.0934C17.6824 12.7316 16.2892 13.5878 14.897 14.977C13.5047 16.3662 12.6502 17.7608 12.0116 19.4056C11.3933 20.9948 10.971 22.8124 10.8497 25.4738C10.7265 28.1394 10.6982 28.9916 10.6982 35.7808C10.6982 42.57 10.7265 43.4222 10.8497 46.0878C10.971 48.7494 11.3933 50.5668 12.0116 52.156C12.6502 53.7998 13.5049 55.196 14.897 56.5846C16.289 57.9732 17.6824 58.8282 19.3282 59.4682C20.9204 60.0862 22.7371 60.5082 25.4001 60.6294C28.0687 60.7506 28.92 60.7808 35.7132 60.7808C42.5065 60.7808 43.3592 60.7526 46.0264 60.6294C48.6896 60.5082 50.5081 60.0862 52.0983 59.4682C53.7431 58.8282 55.1373 57.9738 56.5295 56.5846C57.9218 55.1954 58.7745 53.7998 59.4149 52.156C60.0332 50.5668 60.4575 48.7492 60.5768 46.0878C60.698 43.4202 60.7262 42.57 60.7262 35.7808C60.7262 28.9916 60.698 28.1394 60.5768 25.4738C60.4555 22.8122 60.0332 20.9938 59.4149 19.4056C58.7745 17.7618 57.9196 16.3684 56.5295 14.977C55.1395 13.5856 53.7431 12.7316 52.1003 12.0934C50.5081 11.4754 48.6894 11.0514 46.0284 10.9322C43.3612 10.811 42.5085 10.7808 35.7152 10.7808C28.922 10.7808 28.0687 10.809 25.4001 10.9322Z"
+                            fill="#111827" />
+                          </svg>
+                          <span className="ml-2">Instagram</span>
+                      </a>
+                  </li>
+                  <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="https://www.tiktok.com/@saluteconai_it?is_from_webapp=1&sender_device=pc" aria-label="TIKTOK" target="_blank" rel="noopener"
+                          className="w-min flex items-center px-1 py-1 rounded-md text-black ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 72 72"
+                        fill="none">
+                        <path
+                          d="M50.0783 22.6244C49.7746 22.4674 49.4789 22.2953 49.1924 22.1088C48.3592 21.5579 47.5952 20.9089 46.9171 20.1756C45.2202 18.2341 44.5864 16.2644 44.353 14.8853H44.3624C44.1674 13.7406 44.248 13 44.2602 13H36.5314V42.8856C36.5314 43.2869 36.5314 43.6834 36.5146 44.0753C36.5146 44.1241 36.5099 44.1691 36.5071 44.2216C36.5071 44.2431 36.5071 44.2656 36.5024 44.2881C36.5024 44.2938 36.5024 44.2994 36.5024 44.305C36.4209 45.3773 36.0772 46.4131 35.5014 47.3214C34.9257 48.2297 34.1355 48.9825 33.2005 49.5138C32.226 50.0681 31.1238 50.359 30.0027 50.3575C26.4017 50.3575 23.4833 47.4213 23.4833 43.795C23.4833 40.1688 26.4017 37.2325 30.0027 37.2325C30.6843 37.2319 31.3618 37.3391 32.0099 37.5503L32.0192 29.6809C30.0518 29.4268 28.053 29.5832 26.149 30.1402C24.245 30.6972 22.477 31.6427 20.9567 32.9172C19.6246 34.0746 18.5047 35.4557 17.6474 36.9981C17.3211 37.5606 16.0902 39.8209 15.9411 43.4894C15.8474 45.5716 16.4727 47.7288 16.7708 48.6203V48.6391C16.9583 49.1641 17.6849 50.9556 18.8689 52.4659C19.8237 53.6774 20.9518 54.7417 22.2167 55.6244V55.6056L22.2355 55.6244C25.9771 58.1669 30.1255 58 30.1255 58C30.8436 57.9709 33.2492 58 35.9811 56.7053C39.0111 55.27 40.7361 53.1316 40.7361 53.1316C41.8381 51.8538 42.7144 50.3977 43.3274 48.8256C44.0267 46.9872 44.2602 44.7822 44.2602 43.9009V28.0459C44.3539 28.1022 45.6027 28.9281 45.6027 28.9281C45.6027 28.9281 47.4017 30.0813 50.2086 30.8322C52.2224 31.3666 54.9355 31.4791 54.9355 31.4791V23.8066C53.9849 23.9097 52.0546 23.6097 50.0783 22.6244Z"
+                          fill="#111827" />
+                        </svg>
+                          <span className="ml-2">TikTok</span>
+                      </a>
+                  </li>
+                  
+              </ul>
+          </div>
+
+
           </div>
         </div>
       </div>

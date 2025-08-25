@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
       <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
       </head>
@@ -39,7 +38,7 @@ export default function RootLayout({
                   <span className=" max-w-0 hidden lg:block  group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
                 </Link>
                 <Link href="/about" className="group hover:text-blue-600 transition duration-300 text-md font-medium">
-                  Su di Me
+                  About
                   <span className="sm:block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
                 </Link>
               </nav>

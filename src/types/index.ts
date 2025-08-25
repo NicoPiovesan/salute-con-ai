@@ -1,4 +1,3 @@
-// src/types/index.ts
 export interface Paper {
     id: string
     title: string
