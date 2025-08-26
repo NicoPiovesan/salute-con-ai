@@ -1,0 +1,21 @@
+export default {
+    backToArticles: "← Back to articles",
+    notFound: "Paper not found",
+    category: "Category",
+    searchPlaceholder: "Search by title",
+    result: "Result",
+    results: "Results",
+    foundFor: "found for",
+    noArticlesFound: "No articles found",
+    tryOtherTerms: (searchTerm: string) => `Try searching with different or more generic terms for "${searchTerm}"`,
+    noArticlesAvailable: "No articles available",
+    showAll: "Show all",
+    publishedArticles: "Published articles",
+    articlesIntro: "A blog where articles are released regarding AI in the healthcare sector.",
+    articleList: "Articles list",
+    whoWeAre: "Who we are?",
+    aboutUs: "About us",
+    descriptionSCAI:" We are committed to providing support for conscious use of AI for your health.",
+    ourSocials:"Our socials",
+  };
+  

@@ -1,14 +1,75 @@
-import type { Metadata } from 'next'
+'use client'
 import { Inter } from 'next/font/google'
+import { useState } from 'react'
 import './globals.css'
+import { useEffect } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
+import ReactCountryFlag from "react-country-flag"
+
+export function LanguageToggle() {
+  const searchParams = useSearchParams()
+  const [currentLang, setCurrentLang] = useState<'it' | 'en'>('it')
+
+  useEffect(() => {
+    const langParam = searchParams.get('lang')
+    if (langParam === 'en' || langParam === 'it') {
+      setCurrentLang(langParam)
+    }
+  }, [searchParams])
+
+
+  const toggleLanguage = (lang: 'it' | 'en') => {
+    setCurrentLang(lang)
+  }
+
+  return (
+    <div className="relative inline-flex items-center h-6">
+      {/* Bandiera Italiana */}
+      <Link 
+        href="?lang=en" 
+        className={`absolute transition-all duration-300 ease-in-out ${
+          currentLang === 'it' 
+            ? 'opacity-100 z-10 scale-110' 
+            : 'opacity-0 z-0 scale-90 pointer-events-none'
+        }`}
+        onClick={() => toggleLanguage('en')}
+      >
+        <ReactCountryFlag 
+          countryCode="IT" 
+          style={{ fontSize: '1.5rem' }}
+          className="cursor-pointer hover:scale-110 transition-transform"
+        />
+      </Link>
+
+      {/* Bandiera Inglese */}
+      <Link 
+        href="?lang=it" 
+        className={`absolute transition-all duration-300 ease-in-out ${
+          currentLang === 'en' 
+            ? 'opacity-100 z-10 scale-110' 
+            : 'opacity-0 z-0 scale-90 pointer-events-none'
+        }`}
+        onClick={() => toggleLanguage('it')}
+      >
+        <ReactCountryFlag 
+          countryCode="GB" 
+          style={{ fontSize: '1.5rem' }}
+          className="cursor-pointer hover:scale-110 transition-transform"
+        />
+      </Link>
+    </div>
+  )
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Research Papers Blog',
-  description: 'A blog showcasing academic papers and research findings',
+
+function getLang(): "it" | "en" {
+  const searchParams = useSearchParams()
+  const lang = searchParams.get('lang') === "en" ? "en" : "it"
+  return lang;
 }
 
 export default function RootLayout({
@@ -16,42 +77,50 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const lang = getLang();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+      <link rel="icon" type="image/x-icon" href="/images/logoSalcai.ico"/>
       </head>
       <body className={inter.className}>
         <header className="bg-white  m-7 ">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
               <div className="flex-shrink-0 flex items-center">
-              <Image src="/images/logoSalcai.jpg" className='mr-3 rounded-xl' alt="Salute con AI" width={41} height={41} />
+              <Image src="/images/logoSalcai.jpeg" className='mr-3 rounded-2xl' alt="Salute con AI" width={60} height={60} />
                 <h1 className="text-xl font-semibold text-gray-700">
                   
-                  <Link href="/">Salute con AI</Link>
+                  <Link href={`/?lang=${lang}`}>Salute con AI</Link>
                 </h1>
               </div>
               <nav className="block md:ml-6 md:flex md:space-x-8">
-              <Link href="/" className="group hidden lg:block hover:text-blue-600 transition duration-300 text-md font-medium">
+              <Link href={`/?lang=${lang}`} className="group hidden lg:block hover:text-blue-600 transition duration-300 text-md font-medium">
                   Home
                   <span className=" max-w-0 hidden lg:block  group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
                 </Link>
-                <Link href="/about" className="group hover:text-blue-600 transition duration-300 text-md font-medium">
+                <Link href={`/about?lang=${lang}`} className="group hover:text-blue-600 transition duration-300 text-md font-medium">
                   About
                   <span className="sm:block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
                 </Link>
+                <div className="flex gap-2">
+                <LanguageToggle />
+              </div>
               </nav>
             </div>
           </div>
         </header>
+        <Image src="/images/banner_hcai.jpg" className='z-0 hidden lg:block relative w-full h-50  mx-auto mt-12 box-shadow object-cover' alt="Salute con AI" width={3000} height={400} />
+
         <main className='lg:m-7 lg:shadow-md lg:rounded-3xl'>
           {children}
         </main>
+        
         <footer className="bg-white mt-12">
           <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-6 md:order-2">
-            <a href="javascript:;"
+            <a href="https://www.facebook.com/people/Saluteconai/61578948315913/#"
               className="p-2 rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 71 72"
               fill="none">
@@ -87,6 +156,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        
       </body>
     </html>
   )

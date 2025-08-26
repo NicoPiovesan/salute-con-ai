@@ -3,9 +3,12 @@ import Link from 'next/link'
 import { getPaperBySlug, getAllPapers } from '@/services/papersService'
 import PapersListSidebar from '@/components/PapersListSidebar'
 import ReactMarkdown from 'react-markdown'
+import it from "@/locales/it";
+import en from "@/locales/en";
 
 interface PageProps {
   params: { slug: string }
+  searchParams?: { lang?: string };
 }
 
 export async function generateStaticParams() {
@@ -15,20 +18,26 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params, searchParams }: PageProps) {
+  const lang = searchParams?.lang;
   const paper = await getPaperBySlug(params.slug)
+
   if (!paper) {
     return {
       title: 'Paper Not Found',
     }
   }
+
   return {
-    title: paper.title,
-    description: paper.excerpt,
+    title: lang === "it" ? paper.titleIt : paper.titleEn,
+    description: lang === "it" ? paper.excerptIt : paper.excerptEn,
   }
 }
 
-export default async function PaperPage({ params }: PageProps) {
+export default async function PaperPage({ params, searchParams }: PageProps) {
+  const lang = searchParams?.lang;
+  const t = lang === "it" ? it : en;
+
   const paper = await getPaperBySlug(params.slug)
   if (!paper) {
     notFound()
@@ -38,15 +47,18 @@ export default async function PaperPage({ params }: PageProps) {
     <div className='lg:grid lg:grid-cols-3'>
       <article className="flex lg:col-span-2 sm:m-5 flex-col items-start justify-center mx-auto max-w-4xl px-4 py-24">
         <Link 
-          href="/"
+          href={`/?lang=${lang}`}
           className="mb-8 text-blue-600 hover:text-blue-800 font-medium transition delay-50 duration-300 ease-in-out hover:-translate-x-3"
         >
-          &larr; Ritorna agli articoli
+          {t.backToArticles}
         </Link>
         
         <div className="flex items-center gap-x-4 text-xs mb-4">
           <time dateTime={paper.date} className="text-gray-500">
-            {new Date(paper.date).toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
+          {new Date(paper.date).toLocaleDateString(
+              lang === "it" ? "it-IT" : "en-US",
+              { year: "numeric", month: "long", day: "numeric" }
+            )}
           </time>
           <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">
             {paper.category}
@@ -54,13 +66,16 @@ export default async function PaperPage({ params }: PageProps) {
         </div>
         
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          {paper.title}
+          {lang === "it" ? paper.titleIt : paper.titleEn}
         </h1>
+        
+        <p className="mt-10 lg:text-2xl font-semibold tracking-tight text-gray-600 sm:text-4xl">
+          {lang === "it" ? paper.excerptIt : paper.excerptEn}
+        </p>
         
         <div className="mt-8 prose prose-lg max-w-none">
           <ReactMarkdown
             components={{
-              // Personalizzazioni opzionali dei componenti
               h2: ({ node, ...props }) => (
                 <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800" {...props} />
               ),
@@ -93,7 +108,7 @@ export default async function PaperPage({ params }: PageProps) {
               ),
             }}
           >
-            {paper.content}
+            {lang === "it" ? paper.contentIt : paper.contentEn}
           </ReactMarkdown>
         </div>
       </article>

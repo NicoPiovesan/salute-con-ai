@@ -1,21 +1,28 @@
+'use client'
 import Link from "next/link"
+import it from "@/locales/it";
+import en from "@/locales/en";
+import { useSearchParams } from 'next/navigation'
 export default function About() {
+  const searchParams = useSearchParams()
+  const lang = searchParams.get('lang') === "en" ? "en" : "it"
+  const t = lang === "it" ? it : en
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Link 
-          href="/"
+          href={`/?lang=${lang}`}
           className="mb-10 text-blue-600 hover:text-blue-800 font-medium transition delay-50 duration-300 ease-in-out hover:-translate-x-3"
         >
-          &larr; Ritorna agli articoli
+          {t.backToArticles}
         </Link>
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-blue-600">Su di Noi</h2>
+            <h2 className="text-base font-semibold leading-7 text-blue-600">{t.aboutUs}</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Cosa è "Salute con AI"?
+              {t.whoWeAre}
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            Ci impegniamo a fornire supporto per un utilizzo consapevole di AI per la propria salute.
+           {t.descriptionSCAI}
             </p>
             
             
@@ -24,7 +31,7 @@ export default function About() {
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <div className="flex flex-col items-center justify-center">
               <img
-                src="/images/LogoSalcai.jpg"
+                src="/images/LogoSalcai.jpeg"
                 alt="Profile"
                 className="h-32 w-32 rounded-full object-cover mb-8"
               />
@@ -32,13 +39,13 @@ export default function About() {
             </div>
             {/*I nostri link social */}
             <p className="mt-6 text-center text-lg leading-8 text-gray-600">
-              I nostri social:
+              {t.ourSocials}
             </p>
 
 
             <div >
               <ul className="md:flex justify-center space-x-6 md:order-2">
-                <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="#" aria-label="FACEBOOK" target="_blank" rel="noopener"
+                <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="https://www.facebook.com/people/Saluteconai/61578948315913/#" aria-label="FACEBOOK" target="_blank" rel="noopener"
                           className="w-min flex items-center px-1 py-1 rounded-md text-black "><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 71 72"
                           fill="none">
                           <path
