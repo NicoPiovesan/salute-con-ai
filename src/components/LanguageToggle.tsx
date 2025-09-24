@@ -1,5 +1,6 @@
 "use client"
 
+import {Suspense} from "react"
 import Link from "next/link"
 import ReactCountryFlag from "react-country-flag"
 import { useLang } from "./LangProvider"
@@ -8,6 +9,7 @@ export function LanguageToggle() {
   const { lang } = useLang()
 
   return (
+    <Suspense>
     <div className="relative inline-flex items-center h-6">
       {/* Bandiera Italiana → passa a EN */}
       <Link
@@ -41,5 +43,6 @@ export function LanguageToggle() {
         />
       </Link>
     </div>
+    </Suspense>
   )
 }

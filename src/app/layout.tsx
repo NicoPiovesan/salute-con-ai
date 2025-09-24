@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Image from "next/image"
 import Link from "next/link"
-
+import { Suspense } from "react"
 import LangProvider from "@/components/LangProvider"
 import { LanguageToggle } from "@/components/LanguageToggle"
 
@@ -14,6 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <Suspense fallback={<p>Loading…</p>}>
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/x-icon" href="/images/logoSalcai.ico" />
@@ -88,5 +89,6 @@ export default function RootLayout({
         </LangProvider>
       </body>
     </html>
+    </Suspense>
   )
 }

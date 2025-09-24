@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import { createContext, useContext, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 
@@ -24,9 +25,11 @@ export default function LangProvider({ children }: { children: React.ReactNode }
   }, [searchParams])
 
   return (
+    <Suspense>
     <LangContext.Provider value={{ lang, setLang }}>
       {children}
     </LangContext.Provider>
+    </Suspense>
   )
 }
 
