@@ -33,7 +33,7 @@ export default function About() {
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <div className="flex flex-col items-center justify-center">
               <img
-                src="/images/LogoSalcai.jpeg"
+                src="/LogoSalcai.jpeg"
                 alt="Profile"
                 className="h-32 w-32 rounded-full object-cover mb-8"
               />

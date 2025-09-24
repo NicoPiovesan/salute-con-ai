@@ -152,7 +152,7 @@ export default function Home() {
             {t.articlesIntro}
           </p>
         </div>
-        <Image src="/images/logoSalcai.jpeg" className='sm: rounded-4xl shadow-lg' alt="Salute con AI" width={200} height={200} />
+        <Image src="/logoSalcai.jpeg" className='sm: rounded-4xl shadow-lg' alt="Salute con AI" width={200} height={200} />
         </div>
         
         <PapersListWithSearch lang={lang} />
