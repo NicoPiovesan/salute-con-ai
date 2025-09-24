@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
@@ -140,6 +141,7 @@ export default function Home() {
 
 
   return (
+    <Suspense fallback={<p>Loading…</p>}>
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className='grid grid-cols-3'>
@@ -156,5 +158,6 @@ export default function Home() {
         <PapersListWithSearch lang={lang} />
       </div>
     </div>
+    </Suspense>
   )
 }

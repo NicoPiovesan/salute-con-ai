@@ -3,11 +3,13 @@ import Link from "next/link"
 import it from "@/locales/it";
 import en from "@/locales/en";
 import { useSearchParams } from 'next/navigation'
+import { Suspense } from "react";
 export default function About() {
   const searchParams = useSearchParams()
   const lang = searchParams.get('lang') === "en" ? "en" : "it"
   const t = lang === "it" ? it : en
     return (
+      <Suspense fallback={<p>Loading…</p>}>
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Link 
@@ -85,5 +87,6 @@ export default function About() {
           </div>
         </div>
       </div>
+      </Suspense>
     )
   }

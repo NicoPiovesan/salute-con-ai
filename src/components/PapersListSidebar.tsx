@@ -51,6 +51,7 @@ function PapersList () {
     
 
     return (
+      <Suspense fallback={<p>Loading…</p>}>
         <div className="mx-auto list-item mt-10 max-w-2xl grid-cols-1 gap-x-2 gap-y-4 border-l border-gray-200 pt-3 overflow-auto">
         {displayedPapers.map((paper) => (
           <Link key={paper.id} href={`/papers/${paper.slug}?lang=${lang}`} className='m-5 p-4'>
@@ -79,6 +80,7 @@ function PapersList () {
           </Link>
         ))}
       </div>
+      </Suspense>
     )
 }
 export const dynamic = 'force-dynamic'
@@ -87,6 +89,7 @@ export default function PapersListSidebar() {
     const lang = searchParams.get('lang') === "en" ? "en" : "it"
     const t = lang === "it" ? it : en;
     return(
+        <Suspense fallback={<LoadingSpinner />}>
         <div>
         <div className=' m-5 hidden lg:block'>
             <div className='grid grid-cols-2'>
@@ -99,5 +102,6 @@ export default function PapersListSidebar() {
             
         </div>
         </div>
+        </Suspense>
     )
 }
