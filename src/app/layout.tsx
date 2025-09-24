@@ -19,7 +19,7 @@ export default function RootLayout({
     <Suspense fallback={<p>Loading…</p>}>
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/x-icon" href="/logoSalcai.ico" />
+        <link rel="icon" type="image/x-icon" href="/static/images/logoSalcai.ico" />
       </head>
       <body className={inter.className}>
         <LangProvider>
@@ -29,7 +29,7 @@ export default function RootLayout({
               <div className="flex justify-between h-16 items-center">
                 <div className="flex-shrink-0 flex items-center">
                   <Image
-                    src="/logoSalcai.jpeg"
+                    src="/static/images/logoSalcai.jpeg"
                     className="mr-3 rounded-2xl"
                     alt="Salute con AI"
                     width={60}
@@ -66,7 +66,7 @@ export default function RootLayout({
 
           {/* BANNER */}
           <Image
-            src="/banner_hcai.jpg"
+            src="/static/images/banner_hcai.jpg"
             className="z-0 hidden lg:block relative w-full h-50 mx-auto mt-12 box-shadow object-cover"
             alt="Salute con AI"
             width={3000}
