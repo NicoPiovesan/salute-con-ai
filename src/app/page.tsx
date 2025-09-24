@@ -78,7 +78,7 @@ function PapersListWithSearch({ lang }: PapersListWithSearchProps) {
       {searchTerm && (
         <div className="mt-4">
           <p className="text-sm text-gray-600">
-            {filteredPapers.length} {filteredPapers.length === 1 ? t.result : t.results} {t.foundFor} "{searchTerm}"
+            {filteredPapers.length} {filteredPapers.length === 1 ? t.result : t.results} {t.foundFor} &quot;{searchTerm}&quot;
           </p>
         </div>
       )}

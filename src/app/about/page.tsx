@@ -35,7 +35,7 @@ export default function About() {
                 alt="Profile"
                 className="h-32 w-32 rounded-full object-cover mb-8"
               />
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900">Salute con AI</h3>
+              <h3 className="text-2xl font-bold tracking-tight text-gray-900">Digital AI Health</h3>
             </div>
             {/*I nostri link social */}
             <p className="mt-6 text-center text-lg leading-8 text-gray-600">

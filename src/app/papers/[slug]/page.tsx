@@ -94,12 +94,6 @@ export default async function PaperPage({ params, searchParams }: PageProps) {
               li: ({ node, ...props }) => (
                 <li className="mb-1" {...props} />
               ),
-              code: ({ node, ...props }) =>
-                (node as any).inline ? (
-                  <code className="bg-gray-100 rounded px-1 py-0.5 text-sm font-mono" {...props} />
-                ) : (
-                  <code className="block bg-gray-100 rounded p-4 my-4 text-sm font-mono overflow-x-auto" {...props} />
-                ),
               a: ({ node, ...props }) => (
                 <a className="text-blue-600 hover:text-blue-800 underline" {...props} />
               ),

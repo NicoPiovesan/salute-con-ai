@@ -5,6 +5,17 @@ import {
   orderBy 
 } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
+interface PaperDoc {
+  'title-it': string
+  'title-en': string
+  'excerpt-it': string
+  'excerpt-en': string
+  'content-it': string
+  'content-en': string
+  slug: string
+  date: string
+  category: string
+}
 
 export interface Paper {
   id: string
@@ -54,34 +65,31 @@ export const getPaperBySlug = async (slug: string): Promise<Paper | null> => {
   try {
     const q = query(collection(db, 'papers'))
     const querySnapshot = await getDocs(q)
-    
-    let paperData: any = null
-    let paperId: string | null = null
-    
+
+    let paper: Paper | null = null
+
     querySnapshot.forEach((doc) => {
-      const data = doc.data()
+      const data = doc.data() as PaperDoc
       if (data.slug === slug) {
-        paperId = doc.id
-        paperData = data
+        paper = {
+          id: doc.id,
+          titleIt: data['title-it'],
+          titleEn: data['title-en'],
+          excerptIt: data['excerpt-it'],
+          excerptEn: data['excerpt-en'],
+          contentIt: data['content-it'],
+          contentEn: data['content-en'],
+          slug: data.slug,
+          date: data.date,
+          category: data.category,
+        }
       }
     })
-    
-    if (!paperId || !paperData) return null
-    
-    return {
-      id: paperId,
-      titleIt: paperData['title-it'] || '',
-      titleEn: paperData['title-en'] || '',
-      slug: paperData.slug || '',
-      excerptIt: paperData['excerpt-it'] || '',
-      excerptEn: paperData['excerpt-en'] || '',
-      date: paperData.date || '',
-      category: paperData.category || '',
-      contentIt: paperData['content-it'] || '',
-      contentEn: paperData['content-en'] || ''
-    }
+
+    return paper
   } catch (error) {
     console.error('Error getting paper:', error)
     return null
   }
 }
+
