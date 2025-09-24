@@ -20,6 +20,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <meta name="color-scheme" content="light only" />
+      <meta name="supported-color-schemes" content="light" />
       </head>
       <body className={inter.className}>
         <LangProvider>
