@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Suspense } from "react"
 import LangProvider from "@/components/LangProvider"
 import { LanguageToggle } from "@/components/LanguageToggle"
+import LocalizedLink from "@/components/LocalizedLink"
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,25 +36,26 @@ export default function RootLayout({
                     height={60}
                   />
                   <h1 className="text-xl font-semibold text-gray-700">
-                    <Link href="/">Digital AI Health</Link>
+                    <LocalizedLink href="/">Digital AI Health</LocalizedLink>
+
                   </h1>
                 </div>
 
                 <nav className="block md:ml-6 md:flex md:space-x-8">
-                  <Link
+                  <LocalizedLink
                     href="/"
                     className="group hidden lg:block hover:text-blue-600 transition duration-300 text-md font-medium"
                   >
                     Home
                     <span className="max-w-0 hidden lg:block group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
-                  </Link>
-                  <Link
+                  </LocalizedLink>
+                  <LocalizedLink
                     href="/about"
                     className="group hover:text-blue-600 transition duration-300 text-md font-medium"
                   >
                     About
                     <span className="sm:block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600"></span>
-                  </Link>
+                  </LocalizedLink>
                   <div className="flex gap-2">
                     <LanguageToggle />
                   </div>
