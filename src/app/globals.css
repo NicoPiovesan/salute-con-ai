@@ -5,6 +5,25 @@
   --foreground: #171717;
 }
 
+html, body {
+  color-scheme: light !important;
+  background-color: white !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    background-color: white !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
