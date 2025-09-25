@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <LangProvider>
           {/* HEADER */}
-          <header className="bg-white m-7">
+          <header className="bg-white lg:m-7 sm:m-3">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16 items-center">
                 <div className="flex-shrink-0 flex items-center">
