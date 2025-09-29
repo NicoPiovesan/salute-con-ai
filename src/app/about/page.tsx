@@ -19,12 +19,12 @@ export default function About() {
         >
           {t.backToArticles}
         </Link>
-          <div className="mx-auto max-w-2xl lg:text-center">
+          <div className="mx-auto max-w-7xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-blue-600">{t.aboutUs}</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {t.whoWeAre}
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 whitespace-pre-line">
            {t.descriptionSCAI}
             </p>
             
@@ -48,14 +48,16 @@ export default function About() {
 
             <div >
               <ul className="md:flex justify-center space-x-6 md:order-2">
-                <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="https://www.facebook.com/people/Saluteconai/61578948315913/#" aria-label="FACEBOOK" target="_blank" rel="noopener"
-                          className="w-min flex items-center px-1 py-1 rounded-md text-black "><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 71 72"
-                          fill="none">
-                          <path
-                            d="M46.4233 38.6403L47.7279 30.3588H39.6917V24.9759C39.6917 22.7114 40.8137 20.4987 44.4013 20.4987H48.1063V13.4465C45.9486 13.1028 43.7685 12.9168 41.5834 12.8901C34.9692 12.8901 30.651 16.8626 30.651 24.0442V30.3588H23.3193V38.6403H30.651V58.671H39.6917V38.6403H46.4233Z"
-                            fill="#111827" />
-                          </svg>
-                          <span className="ml-2">Facebook</span>
+                <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300">
+                  <a href="https://www.linkedin.com/company/digitalhealth-ai/posts/?feedView=all" aria-label="INSTAGRAM" target="_blank" rel="noopener"
+                          className="w-min flex items-center px-1 py-1 rounded-md text-black ">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 72 72"
+                              fill="none">
+                              <path
+                                d="M24.7612 55.999V28.3354H15.5433V55.999H24.7621H24.7612ZM20.1542 24.5591C23.3679 24.5591 25.3687 22.4348 25.3687 19.7801C25.3086 17.065 23.3679 15 20.2153 15C17.0605 15 15 17.065 15 19.7799C15 22.4346 17.0001 24.5588 20.0938 24.5588H20.1534L20.1542 24.5591ZM29.8633 55.999H39.0805V40.5521C39.0805 39.7264 39.1406 38.8985 39.3841 38.3088C40.0502 36.6562 41.5668 34.9455 44.1138 34.9455C47.4484 34.9455 48.7831 37.4821 48.7831 41.2014V55.999H58V40.1376C58 31.6408 53.4532 27.6869 47.3887 27.6869C42.4167 27.6869 40.233 30.4589 39.0198 32.347H39.0812V28.3364H29.8638C29.9841 30.9316 29.8631 56 29.8631 56L29.8633 55.999Z"
+                                fill="#111827" />
+                              </svg>
+                          <span className="ml-2">Linkedin</span>
                       </a>
                   </li>
                   <li className="my-4 w-1/2 rounded-lg hover:-translate-y-2 flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-green-300"><a href="https://www.instagram.com/saluteconai_it/" aria-label="INSTAGRAM" target="_blank" rel="noopener"

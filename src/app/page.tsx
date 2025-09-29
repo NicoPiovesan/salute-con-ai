@@ -89,7 +89,7 @@ function PapersListWithSearch({ lang }: PapersListWithSearchProps) {
         {filteredPapers.length > 0 ? (
           filteredPapers.map((paper) => (
             <Link key={paper.id} href={`/papers/${paper.slug}?lang=${lang}`}>
-              <article className="flex max-w-xl flex-col items-start justify-between hover:border-green-400 hover:bg-green-200 hover:border-1 rounded-2xl p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-3">
+              <article className="flex max-w-xl flex-col items-start justify-between hover:border-green-400 hover:bg-green-100 hover:border-1 rounded-2xl p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-3">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={paper.date} className="text-gray-500">
                     {new Date(paper.date).toLocaleDateString(

@@ -11,11 +11,11 @@ export default {
     noArticlesAvailable: "No articles available",
     showAll: "Show all",
     publishedArticles: "Published articles",
-    articlesIntro: "A blog where articles are released regarding AI in the healthcare sector.",
+    articlesIntro: "Topics and practical insights on how Artificial intelligence can become a trusted ally!",
     articleList: "Articles list",
-    whoWeAre: "Who we are?",
+    whoWeAre: "Welcome!",
     aboutUs: "About us",
-    descriptionSCAI:" We are committed to providing support for conscious use of AI for your health.",
+    descriptionSCAI:"We are a group of dedicated healthcare professionals, passionate about patient safety, quality care, and effective risk management. Every day, we immerse ourselves in the evolving landscape of healthcare, exploring the challenges and opportunities brought by groundbreaking technologies that are transforming not only medical practices but also how we experience health and wellness. \n\nThis website is your gateway to discovering artificial intelligence in healthcare—presented in a straightforward and engaging way. Here, you’ll find practical insights, real-world examples, and clear reflections on how AI can become a trusted ally for both patients and healthcare professionals. Together, we’ll explore its benefits, acknowledge its limitations, and address the risks, empowering you to use AI confidently and safely for your well-being. \n\nOur mission? To create a dynamic environment for open dialogue and exchange—whether you’re a patient, a healthcare provider, or simply curious about the future of medicine. You’ll have access to valuable resources, up-to-date information, and a welcoming community eager to discuss, learn, and share. \n\nBecause technology truly makes a difference only when everyone understands it—and together, we can shape its future. Join the conversation, and let’s build a smarter, safer, and more human healthcare system, one insight at a time.",
     ourSocials:"Our socials",
   };
   
