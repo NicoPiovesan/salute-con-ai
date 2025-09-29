@@ -3,6 +3,7 @@ import "./globals.css"
 import Image from "next/image"
 import Link from "next/link"
 import { Suspense } from "react"
+import LoadingSpinner from "@/components/LoadingSpinner"
 import LangProvider from "@/components/LangProvider"
 import { LanguageToggle } from "@/components/LanguageToggle"
 import { Analytics } from "@vercel/analytics/next"
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
+    <Suspense fallback={<LoadingSpinner />}>
     <html lang="en" suppressHydrationWarning>
       <head>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
