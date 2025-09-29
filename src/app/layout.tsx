@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Suspense } from "react"
 import LangProvider from "@/components/LangProvider"
 import { LanguageToggle } from "@/components/LanguageToggle"
+import { Analytics } from "@vercel/analytics/next"
 import LocalizedLink from "@/components/LocalizedLink"
 
 
@@ -77,7 +78,7 @@ export default function RootLayout({
 
           {/* MAIN CONTENT */}
           <main className="lg:m-7 lg:shadow-md lg:rounded-3xl">{children}</main>
-
+          <Analytics />
           {/* FOOTER */}
           <footer className="bg-white mt-12">
             <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
